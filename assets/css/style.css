@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Configuração do Background */
+   
+    
+    height: 100vh;
+}
+
+#bg-animado {
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Joga o canvas para trás de tudo */
+    background-color: #050515; /* Um fundo escuro que combina com o seu tema */
+}
+
+#topo { 
+  height: 10vh; 
+  width: 100%; 
+  
+  background-color: rgba(0, 35, 101, 0.5); 
+  
+  backdrop-filter: blur(10px); 
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  
+  box-sizing: border-box; 
+  padding: 0 20px;
+
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+  
+  box-shadow: 0 0 15px rgba(0, 35, 101, 0.4);
+  opacity: 77%;
+
+  position: relative;
+  z-index: 1;
+}
+
+
+header h1 {
+  font-size: calc(1rem + 1.5vw); 
+  font-family: serif;
+  color: black;
+}
+
+#enter {
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 10px;
+  height: 45px;
+  width: 100px;
+  background-color: #002365;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 35, 101, 0.6);
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+
+#enter :hover {
+    opacity: 71%;
+    background-color: #001845; 
+    box-shadow: 0 6px 20px rgba(0, 210, 255, 0.4); 
+    transform: translateY(-2px);
+}
+
+#enter a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.select-topo {
+    background: none;
+    color: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select-topo:hover {
+    border-color: #00d2ff;
+    background-color: rgba(0, 35, 101, 0.6);
+
+}
+
+.select-topo option {
+    background-color: #002365;
+    color: #ffffff;
+    cursor: pointer;
+}
