@@ -9,10 +9,6 @@ body {
     padding: 30px;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-    /* Configuração do Background */
-   
-    
     height: 100vh;
 }
 
@@ -29,30 +25,21 @@ body {
 #topo { 
   height: 10vh; 
   width: 100%; 
-  
   background-color: rgba(0, 35, 101, 0.5); 
-  
   backdrop-filter: blur(10px); 
-  
   display: flex;
   align-items: center;
   justify-content: space-between; 
-  
   box-sizing: border-box; 
   padding: 0 20px;
-
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  
   border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
-  
   box-shadow: 0 0 15px rgba(0, 35, 101, 0.4);
   opacity: 77%;
-
   position: relative;
   z-index: 1;
 }
-
 
 header h1 {
   font-size: calc(1rem + 1.5vw); 
@@ -112,7 +99,73 @@ ul {
 }
 
 .select-topo option {
-    background-color: #002365;
-    color: #ffffff;
-    cursor: pointer;
+  background-color: #002365;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.login-main {
+  height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  width: 400px;
+  height: 60vh;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: rgba(17, 24, 68, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.login h1 {
+  font-size: calc(1rem + 1.5vw); 
+  font-family: 'Bitcount Grid Double', sans-serif;
+  color: black;
+  text-align: center;
+  margin-bottom: 20px; 
+}
+
+.login input {
+  width: 90%;
+  height: 30%;
+  padding: 10px;
+  margin: 25px 0;
+  border-radius: 20px;
+  border: none;
+  color: black;
+  font-size: calc(1rem + 0.5vw);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.login a {
+  color: #2B4353;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#acessar {
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 10px;
+  height: 45px;
+  width: 100px;
+  background-color: #002365;
+  margin: 10px;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 35, 101, 0.6);
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+
+#acessar:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

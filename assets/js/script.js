@@ -1,3 +1,4 @@
+// procura elemento html com id digitado e ativa contexto 2D
 const canvas = document.getElementById('bg-animado');
 const ctx = canvas.getContext('2d');
 
@@ -9,7 +10,7 @@ ajustarTamanho();
 window.addEventListener('resize', ajustarTamanho);
 
 const particulas = [];
-const quantidadeParticulas = 80; 
+const quantidadeParticulas = 150; 
 
 
 class Particula {
@@ -20,8 +21,6 @@ class Particula {
         this.velocidadeY = (Math.random() - 0.5) * 1.5; 
         this.tamanho = 2; 
     }
-
-    // Desenha o pontinho na tela
     desenhar() {
         ctx.fillStyle = '#00d2ff'; 
         ctx.beginPath();
