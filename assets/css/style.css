@@ -47,31 +47,80 @@ header h1 {
   color: black;
 }
 
-#enter {
-  font-size: 18px;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-  color: #ffffff;
-  border-radius: 10px;
-  height: 45px;
-  width: 100px;
-  background-color: #002365;
-  border: none;
-  box-shadow: 0 4px 15px rgba(0, 35, 101, 0.6);
+/* From Uiverse.io by Creatlydev */ 
+.button {
   cursor: pointer;
-  transition: all 0.3 ease;
+  border: none;
+  background: #7808d0;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  place-content: center;
+  transition:
+    background 300ms,
+    transform 200ms;
+  font-weight: 600;
 }
 
-#enter :hover {
-    opacity: 71%;
-    background-color: #001845; 
-    box-shadow: 0 6px 20px rgba(0, 210, 255, 0.4); 
-    transform: translateY(-2px);
+.button__text {
+  position: absolute;
+  inset: 0;
+  animation: text-rotation 8s linear infinite;
+
+  > span {
+    position:fixed;
+    transform: rotate(calc(19deg * var(--index)));
+    inset: 7px;
+  }
 }
 
-#enter a {
-  text-decoration: none;
+.button__circle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  background: #fff;
+  color: #360982;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.button__icon--copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.button:hover {
+  background: #000;
+  transform: scale(1.05);
+}
+
+.button:hover .button__icon {
+  color: #000;
+}
+
+.button:hover .button__icon:first-child {
+  transition: transform 0.3s ease-in-out;
+  transform: translate(150%, -150%);
+}
+
+.button:hover .button__icon--copy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: translate(0);
+}
+
+@keyframes text-rotation {
+  to {
+    rotate: 360deg;
+  }
+}
+
 
 ul {
   list-style-type: none;
